@@ -211,6 +211,26 @@ function bindEvents() {
   });
 }
 
+let wasPlayingBeforeHide = false;
+
+function handlePageVisibility() {
+  if (document.hidden) {
+    wasPlayingBeforeHide = !elements.bgMusic.paused;
+
+    if (wasPlayingBeforeHide) {
+      pauseMusic();
+    }
+
+    return;
+  }
+
+  if (wasPlayingBeforeHide) {
+    playMusic();
+  }
+}
+
+document.addEventListener('visibilitychange', handlePageVisibility);
+
 function init() {
   createDots();
   bindEvents();
