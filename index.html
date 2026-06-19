@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Luhim</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- INTRO COVER: tampil pertama kali. Konten utama baru muncul setelah klik Play Memory. -->
+  <section class="intro-cover" id="introCover">
+    <div class="intro-content">
+      <p class="eyebrow">Farewell Night · PRJ 25 Juni</p>
+      <h1>ForLuhim🥀</h1>
+      <p class="subtitle">
+        Sedikit kenangan dari orang-orang yang pernah main, ketawa, dan tumbuh bareng kamu.
+      </p>
+      <button class="intro-play" id="introPlay" type="button">▶ Play Memory</button>
+    </div>
+  </section>
+
+  <main class="app is-hidden" id="mainContent">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">Farewell Night · PRJ 25 Juni</p>
+      <h1>ForLuhim🥀</h1>
+      <p class="subtitle">
+        Sedikit kenangan dari orang-orang yang pernah main, ketawa, dan tumbuh bareng kamu.
+      </p>
+      <button class="music-btn" id="musicBtn" type="button">▶ Play music</button>
+    </section>
+
+    <!-- PHOTO / VIDEO SLIDER -->
+    <section class="photo-card" aria-label="Galeri kenangan Luhim">
+      <div class="slider" id="slider">
+        <!-- Tambah foto baru dengan pola:
+          <article class="slide"><img src="assets/img/foto-19.webp" alt="Kenangan Luhim 19"></article>
+        -->
+        <article class="slide active"><img src="assets/img/foto-1.webp" alt="Kenangan Luhim 1"></article>
+        <article class="slide"><img src="assets/img/foto-2.webp" alt="Kenangan Luhim 2"></article>
+        <article class="slide"><img src="assets/img/foto-3.webp" alt="Kenangan Luhim 3"></article>
+        <article class="slide"><img src="assets/img/foto-4.webp" alt="Kenangan Luhim 4"></article>
+        <article class="slide"><img src="assets/img/foto-5.webp" alt="Kenangan Luhim 5"></article>
+        <article class="slide"><img src="assets/img/foto-6.webp" alt="Kenangan Luhim 6"></article>
+        <article class="slide"><img src="assets/img/foto-7.webp" alt="Kenangan Luhim 7"></article>
+        <article class="slide"><img src="assets/img/foto-8.webp" alt="Kenangan Luhim 8"></article>
+        <article class="slide"><img src="assets/img/foto-9.webp" alt="Kenangan Luhim 9"></article>
+        <article class="slide"><img src="assets/img/foto-10.webp" alt="Kenangan Luhim 10"></article>
+        <article class="slide"><img src="assets/img/foto-11.webp" alt="Kenangan Luhim 11"></article>
+        <article class="slide"><img src="assets/img/foto-12.webp" alt="Kenangan Luhim 12"></article>
+        <article class="slide"><img src="assets/img/foto-13.webp" alt="Kenangan Luhim 13"></article>
+        <article class="slide"><img src="assets/img/foto-14.webp" alt="Kenangan Luhim 14"></article>
+
+        <!-- Video dibuat muted supaya lagu tetap jalan 75% dari awal sampai akhir. -->
+        <article class="slide video-slide">
+          <video src="assets/video/karaoke-luhim.mp4" playsinline muted></video>
+        </article>
+
+        <article class="slide"><img src="assets/img/foto-15.webp" alt="Kenangan Luhim 15"></article>
+        <article class="slide"><img src="assets/img/foto-16.webp" alt="Kenangan Luhim 16"></article>
+        <article class="slide"><img src="assets/img/foto-17.webp" alt="Kenangan Luhim 17"></article>
+        <article class="slide"><img src="assets/img/foto-18.webp" alt="Kenangan Luhim 18"></article>
+      </div>
+
+      <div class="controls">
+        <button class="nav-btn" id="prevBtn" type="button" aria-label="Sebelumnya">‹</button>
+        <div class="dots" id="dots" aria-label="Navigasi slide"></div>
+        <button class="nav-btn" id="nextBtn" type="button" aria-label="Berikutnya">›</button>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="message">
+      <p class="quote">
+        “Pergi jauh bukan berarti hilang. Kamu cuma sedang berjalan ke tempat yang selama ini kamu impikan.”
+      </p>
+      <p class="small">Sampai ketemu lagi, Luhim.</p>
+    </section>
+
+    <!-- FAREWELL EVENT -->
+    <section class="farewell-prj">
+      <p class="farewell-tag">ONE LAST MEMORY</p>
+      <h2>25 Juni 2026</h2>
+
+      <div class="farewell-glass">
+        <div class="farewell-date">📍 Jakarta Fair (PRJ)</div>
+        <div class="farewell-date">🕒 Farewell Luhim</div>
+      </div>
+
+      <div class="countdown-box" id="miniCountdown">
+        <div><strong id="cdDays">00</strong><span>Hari</span></div>
+        <div><strong id="cdHours">00</strong><span>Jam</span></div>
+        <div><strong id="cdMinutes">00</strong><span>Menit</span></div>
+        <div><strong id="cdSeconds">00</strong><span>Detik</span></div>
+      </div>
+
+      <p class="farewell-story">
+        Sampai saat itu tiba, mari kita buat satu kenangan terakhir yang layak untuk diingat.
+      </p>
+    </section>
+
+    <!-- AUDIO -->
+    <audio id="bgMusic" loop preload="auto">
+      <source src="assets/music/lagu-luhim.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Until we meet again, Luhim.</p>
+      <span>DombaTerbang • 2026</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
